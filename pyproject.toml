@@ -9,15 +9,14 @@ description = "A sample AI CLI tool."
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
-    # Add your python dependencies here, e.g.:
-    # "requests",
-    # "numpy",
-    "groq",
+    # Required dependency for the application logic
+    "groq", 
 ]
 
 [project.scripts]
 ai-cli = "ai_cli.main:cli"
 
 [project.urls]
-Homepage = "https://github.com/Anay_Rustogi/AI_CLI"
-Issues = "https://github.com/Anay_Rustogi/AI_CLI/issues"
+# Corrected the repository name to align with the Homebrew formula
+Homepage = "https://github.com/Codemaster-AR/homebrew-ai"
+Issues = "https://github.com/Codemaster-AR/homebrew-ai/issues"
