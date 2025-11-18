@@ -4,13 +4,13 @@
 class AiCli < Formula
   desc "A cool AI CLI tool"
   
-  # 👇 FIX 1: Point to the current, correct GitHub location
-  homepage "https://github.com/Codemaster-AR/AI_CLI"
+  # 👇 FIX 1: Corrected repository name to 'homebrew-ai'
+  homepage "https://github.com/Codemaster-AR/homebrew-ai"
   
-  # 👇 FIX 2: Point the download URL to the correct repository
-  url "https://github.com/Codemaster-AR/AI_CLI/archive/refs/tags/v0.1.0.tar.gz"
+  # 👇 FIX 2: Corrected repository name to 'homebrew-ai'
+  url "https://github.com/Codemaster-AR/homebrew-ai/archive/refs/tags/v0.1.0.tar.gz"
   
-  # 👇 ACTION REQUIRED: You must replace this with the new SHA256 after Step 2 below
+  # 👇 ACTION REQUIRED: You must replace this with the new SHA256 (See Step 2 below)
   sha256 "REPLACE_ME_WITH_THE_NEW_SHA256" 
   
   license "MIT" # Or whatever license you use
@@ -28,8 +28,7 @@ class AiCli < Formula
   end
 
   test do
-    # This test assumes the correct output is "AI CLI Version 1.5.0", 
-    # but the tool version will depend on what is actually in v0.1.0.
+    # You may need to change "1.5.0" to match the actual version in your v0.1.0 tag.
     assert_match "AI CLI Version 1.5.0", shell_output("#{bin}/ai-cli version")
   end
 end
