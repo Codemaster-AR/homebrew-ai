@@ -15,8 +15,8 @@ class AiCli < Formula
   # The URL now points to the new tag (v0.1.1)
   url "https://github.com/Codemaster-AR/homebrew-ai/archive/refs/tags/v0.1.1.tar.gz" 
   
-  # 👇 ACTION REQUIRED: You must replace this with the SHA256 for the v0.1.1 tarball
-  sha256 "REPLACE_ME_WITH_THE_NEW_SHA256_FOR_V0_1_1" 
+  # 👇 FINAL CORRECTED SHA256 👇
+  sha256 "7ff28f66a64d871f456ce3a926dd5d6753c7f48feb6f0bf5eff8e1dda2fdc4d8" 
   
   license "MIT"
 
