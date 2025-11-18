@@ -4,31 +4,27 @@
 class AiCli < Formula
   desc "A cool AI CLI tool"
   
-  # 👇 FIX 1: Corrected repository name to 'homebrew-ai'
-  homepage "https://github.com/Codemaster-AR/homebrew-ai"
+  # Include the Python Virtualenv helper methods (THIS IS THE FIX)
+  include Language::Python::Virtualenv
   
-  # 👇 FIX 2: Corrected repository name to 'homebrew-ai'
+  homepage "https://github.com/Codemaster-AR/homebrew-ai"
   url "https://github.com/Codemaster-AR/homebrew-ai/archive/refs/tags/v0.1.0.tar.gz"
   
-  # 👇 ACTION REQUIRED: You must replace this with the new SHA256 (See Step 2 below)
-  sha256 "REPLACE_ME_WITH_THE_NEW_SHA256" 
+  # 👇 CORRECTED SHA-256 (Found from your latest output) 👇
+  sha256 "9c35f3ffbff580fa83d0d6aa720ef0b74e545f38f266739fbe087a336d9d1844"
   
-  license "MIT" # Or whatever license you use
+  license "MIT"
 
   depends_on "python@3.12"
 
   def install
-    # This is a common pattern for Python tools.
-    # It creates a virtual environment and installs the tool and its dependencies into it.
+    # Now that the Python Virtualenv module is included, these methods will work.
     venv = virtualenv_create(libexec, "python3")
-    # Assuming your source code contains a setup.py or pyproject.toml
     venv.pip_install_and_link buildpath 
-    
-    # Note: If your tool is just a single executable file, the install block would be simpler.
   end
 
   test do
-    # You may need to change "1.5.0" to match the actual version in your v0.1.0 tag.
+    # Ensure this version matches the actual output of your v0.1.0 release
     assert_match "AI CLI Version 1.5.0", shell_output("#{bin}/ai-cli version")
   end
 end
